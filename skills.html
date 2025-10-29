@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesfaye | Skills</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="images/log.png" alt="Tesfaye Logo" class="log-img">
+      <input type="checkbox" id="check">
+      <label for="check" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skills">
+    <h2>💻 My Technical & Professional Skills</h2>
+
+    <!-- CIRCULAR SKILL INDICATORS -->
+    <div class="circular-skills">
+      <div class="circle" style="--progress: 288deg;"><span>70%<br>Java</span></div>
+      <div class="circle" style="--progress: 288deg;"><span>70%<br>SQL</span></div>
+      <div class="circle" style="--progress: 306deg;"><span>85%<br>C++</span></div>
+      <div class="circle" style="--progress: 270deg;"><span>75%<br>HTML/CSS</span></div>
+    </div>
+
+    <div class="skills-container">
+      <!-- Programming -->
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+        <div class="skill">
+          <p>Java</p>
+          <div class="progress"><div class="bar" style="width: 70%"></div><span class="percent">70%</span></div>
+        </div>
+        <div class="skill">
+          <p>C++</p>
+          <div class="progress"><div class="bar" style="width: 85%"></div><span class="percent">85%</span></div>
+        </div>
+        <div class="skill">
+          <p>SQL</p>
+          <div class="progress"><div class="bar" style="width: 70%"></div><span class="percent">70%</span></div>
+        </div>
+        <div class="skill">
+          <p>HTML, CSS, JS</p>
+          <div class="progress"><div class="bar" style="width: 75%"></div><span class="percent">75%</span></div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-database"></i> Database Management</h3>
+        <div class="skill">
+          <p>Oracle</p>
+          <div class="progress"><div class="bar" style="width: 80%"></div><span class="percent">80%</span></div>
+        </div>
+        <div class="skill">
+          <p>SQL Server</p>
+          <div class="progress"><div class="bar" style="width: 70%"></div><span class="percent">70%</span></div>
+        </div>
+        <div class="skill">
+          <p>MySQL</p>
+          <div class="progress"><div class="bar" style="width: 65%"></div><span class="percent">65%</span></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-wrench"></i> Tools & Technologies</h3>
+        <div class="skill">
+          <p>Git & GitHub</p>
+          <div class="progress"><div class="bar" style="width: 65%"></div><span class="percent">65%</span></div>
+        </div>
+        <div class="skill">
+          <p>VS Code, IntelliJ, NetBeans</p>
+          <div class="progress"><div class="bar" style="width: 50%"></div><span class="percent">50%</span></div>
+        </div>
+        <div class="skill">
+          <p>Responsive Design</p>
+          <div class="progress"><div class="bar" style="width: 65%"></div><span class="percent">65%</span></div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-user"></i> Soft Skills</h3>
+        <div class="skill">
+          <p>Problem Solving</p>
+          <div class="progress"><div class="bar" style="width: 80%"></div><span class="percent">80%</span></div>
+        </div>
+        <div class="skill">
+          <p>Teamwork</p>
+          <div class="progress"><div class="bar" style="width: 75%"></div><span class="percent">75%</span></div>
+        </div>
+        <div class="skill">
+          <p>Communication</p>
+          <div class="progress"><div class="bar" style="width: 70%"></div><span class="percent">70%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://t.me/Enatwa_Gondar" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.youtube.com/@tesfayeseifu7143" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/acefaye26" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@acefaye26" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p>&copy; Tesfaye Seifu 2025. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const skills = document.querySelectorAll(".skill");
+      const cards = document.querySelectorAll(".skill-card");
+
+      // Animate bars and percentages
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bar = entry.target.querySelector(".bar");
+            const percent = entry.target.querySelector(".percent");
+            const targetWidth = parseInt(bar.style.width);
+
+            bar.style.width = "0";
+            percent.textContent = "0%";
+            percent.style.opacity = "1";
+
+            let progress = 0;
+            const interval = setInterval(() => {
+              if (progress >= targetWidth) clearInterval(interval);
+              else progress++;
+              bar.style.width = progress + "%";
+              percent.textContent = progress + "%";
+            }, 15);
+
+            bar.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+
+      skills.forEach(skill => observer.observe(skill));
+
+      // Reveal cards
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      cards.forEach(card => cardObserver.observe(card));
+    });
+  </script>
+</body>
+</html>
