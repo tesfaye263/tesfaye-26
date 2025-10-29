@@ -4,7 +4,7 @@ Welcome to my personal portfolio website!
 This project showcases my background, skills, and projects as a **Computer Science student** and aspiring **Full-Stack Java Developer** and **Database Administrator**.
 ## 🚀 Live Website
 You can view the live version here:  
-👉 **https://tesfaye263.github.io/tesfaye-portfolio/**  
+👉 **https://tesfaye263.github.io/tesfaye-26/**  
 ## 🧠 About Me
 I am a third-year Computer Science student passionate about:
 - Java, C++, SQL, and Database Management
